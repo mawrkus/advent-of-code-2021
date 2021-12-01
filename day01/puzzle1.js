@@ -1,6 +1,9 @@
 const textInput = require('./input');
 
-const input = textInput.split("\n").filter(Boolean);
+const input = textInput
+  .split("\n")
+  .filter(Boolean)
+  .map(Number);
 
 let prevDepth = input[0];
 
@@ -16,4 +19,4 @@ const output = input.reduce(
 );
 
 console.log(input);
-console.log(output);
+console.log("→", output);

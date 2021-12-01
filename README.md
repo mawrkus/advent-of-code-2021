@@ -6,7 +6,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 
 | Day | Status |
 | :--- | :---: |
-| [Day 1: Sonar Sweep](./day01) |  TBA |
+| [Day 1: Sonar Sweep](./day01) | ⭐⭐ |
 | [Day 2](./day02) |  TBA |
 | [Day 3](./day03) |  TBA |
 | [Day 4](./day04) |  TBA |
