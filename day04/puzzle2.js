@@ -1,10 +1,8 @@
 const textInput = require("./input");
 
-const [rawNumbers, ...rawBoards] = textInput
-  .split("\n\n")
-  .filter(Boolean);
+const [rawNumbers, ...rawBoards] = textInput.split("\n\n").filter(Boolean);
 
-const numbers = rawNumbers.split(',');
+const numbers = rawNumbers.split(",");
 
 const boards = rawBoards.map((rawBoard) => {
   const board = {
@@ -13,13 +11,15 @@ const boards = rawBoards.map((rawBoard) => {
       rows: [0, 0, 0, 0, 0],
       columns: [0, 0, 0, 0, 0],
     },
+    completed: false,
   };
 
   rawBoard
     .split("\n")
     .filter(Boolean)
     .forEach((rawRow, y) => {
-      rawRow.split(" ")
+      rawRow
+        .split(" ")
         .filter(Boolean)
         .forEach((number, x) => {
           board.numbers[number] = [x, y];
@@ -29,12 +29,14 @@ const boards = rawBoards.map((rawBoard) => {
   return board;
 });
 
-function drawNumbersUntilFirstComplete() {
+function drawNumbersUntilLastComplete() {
+  let completedCount = 0;
+
   for (let n of numbers) {
     for (let board of boards) {
-      const { numbers: boardNumbers, marks: boardMarks } = board;
+      const { completed, numbers: boardNumbers, marks: boardMarks } = board;
 
-      if (!boardNumbers[n]) {
+      if (completed || !boardNumbers[n]) {
         continue;
       }
 
@@ -46,18 +48,23 @@ function drawNumbersUntilFirstComplete() {
       delete boardNumbers[n];
 
       if (boardMarks.columns[x] === 5 || boardMarks.rows[y] === 5) {
-        const sum = Object.keys(boardNumbers).reduce(
-          (acc, n) => acc + Number(n),
-          0
-        );
+        board.completed = true;
+        completedCount += 1;
 
-        return [n, sum];
+        if (completedCount === boards.length) {
+          const sum = Object.keys(boardNumbers).reduce(
+            (acc, n) => acc + Number(n),
+            0
+          );
+
+          return [n, sum];
+        }
       }
     }
   }
 }
 
-const [n, sum] = drawNumbersUntilFirstComplete();
+const [n, sum] = drawNumbersUntilLastComplete();
 
 const output = n * sum;
 
