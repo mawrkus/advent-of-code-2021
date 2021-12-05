@@ -9,7 +9,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 1: Sonar Sweep](./day01) | ⭐⭐ |
 | [Day 2: Dive!](./day02) | ⭐⭐ |
 | [Day 3: Binary Diagnostic](./day03) | ⭐⭐ |
-| [Day 4](./day04) | TBA |
+| [Day 4: Giant Squid](./day04) | ⭐ |
 | [Day 5](./day5) | TBA |
 | [Day 6](./day6) | TBA |
 | [Day 7](./day7) | TBA |
