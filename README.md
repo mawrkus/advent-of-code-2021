@@ -12,7 +12,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 4: Giant Squid](./day04) | ⭐⭐ |
 | [Day 5: Hydrothermal Venture](./day5) | ⭐⭐ |
 | [Day 6: Lanternfish](./day6) | ⭐⭐ |
-| [Day 7](./day7) | TBA |
+| [Day 7: The Treachery of Whales](./day7) | ⭐⭐ |
 | [Day 8](./day8) | TBA |
 | [Day 9](./day9) | TBA |
 | [Day 10](./day10) | TBA |
