@@ -10,11 +10,11 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 2: Dive!](./day02) | ⭐⭐ |
 | [Day 3: Binary Diagnostic](./day03) | ⭐⭐ |
 | [Day 4: Giant Squid](./day04) | ⭐⭐ |
-| [Day 5: Hydrothermal Venture](./day5) | ⭐⭐ |
-| [Day 6: Lanternfish](./day6) | ⭐⭐ |
-| [Day 7: The Treachery of Whales](./day7) | ⭐⭐ |
-| [Day 8](./day8) | TBA |
-| [Day 9](./day9) | TBA |
+| [Day 5: Hydrothermal Venture](./day05) | ⭐⭐ |
+| [Day 6: Lanternfish](./day06) | ⭐⭐ |
+| [Day 7: The Treachery of Whales](./day07) | ⭐⭐ |
+| [Day 8](./day08) | TBA |
+| [Day 9](./day09) | TBA |
 | [Day 10](./day10) | TBA |
 | [Day 11](./day11) | TBA |
 | [Day 12](./day12) | TBA |
