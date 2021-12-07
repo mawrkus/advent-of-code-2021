@@ -20,10 +20,13 @@ function computeTotalFuel(guessPos) {
   }, 0);
 }
 
-let bestPos = 0;
-let output = computeTotalFuel(0);
+const minPos = Math.min(...input);
+const maxPos = Math.max(...input);
 
-for (let pos = 1; pos < Math.max(...input); pos += 1) {
+let bestPos = minPos;
+let output = computeTotalFuel(minPos);
+
+for (let pos = minPos + 1; pos < maxPos; pos += 1) {
   const totalFuel = computeTotalFuel(pos);
 
   if (totalFuel < output) {
