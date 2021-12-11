@@ -14,7 +14,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 6: Lanternfish](./day06) | ⭐⭐ |
 | [Day 7: The Treachery of Whales](./day07) | ⭐⭐ |
 | [Day 8: Seven Segment Search](./day08) | ⭐⭐ |
-| [Day 9](./day09) | TBA |
+| [Day 9: Smoke Basin](./day09) | ⭐⭐ |
 | [Day 10](./day10) | TBA |
 | [Day 11](./day11) | TBA |
 | [Day 12](./day12) | TBA |
