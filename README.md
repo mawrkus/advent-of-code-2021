@@ -13,7 +13,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 5: Hydrothermal Venture](./day05) | ⭐⭐ |
 | [Day 6: Lanternfish](./day06) | ⭐⭐ |
 | [Day 7: The Treachery of Whales](./day07) | ⭐⭐ |
-| [Day 8](./day08) | TBA |
+| [Day 8: Seven Segment Search](./day08) | ⭐⭐ |
 | [Day 9](./day09) | TBA |
 | [Day 10](./day10) | TBA |
 | [Day 11](./day11) | TBA |
