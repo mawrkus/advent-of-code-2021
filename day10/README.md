@@ -1,5 +1,7 @@
 # 🎄 Day 10: Syntax Scoring
 
+💡 https://adventofcode.com/2021/day/10
+
 ## 🧩 First puzzle
 
 You ask the submarine to determine the best route out of the deep-sea cave, but it only replies:

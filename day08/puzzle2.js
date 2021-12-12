@@ -62,6 +62,7 @@ function decodeEntry(inputDigits, outputDigits) {
     })),
   }), {});
 
+  // TODO: use a clever way than "almost brute force" ;)
   // for each encoded signal, select a possible digit
   // with all the selected digits (a guess), try to build the corresponding connections
   // if the connections are valid -> done

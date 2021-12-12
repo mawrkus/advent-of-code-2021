@@ -17,7 +17,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 9: Smoke Basin](./day09) | ⭐⭐ |
 | [Day 10: Syntax Scoring](./day10) | ⭐⭐ |
 | [Day 11: Dumbo Octopus](./day11) | ⭐⭐ |
-| [Day 12](./day12) | TBA |
+| [Day 12: Passage Pathing](./day12) | TBA |
 | [Day 13](./day13) | TBA |
 | [Day 14](./day14) | TBA |
 | [Day 15](./day15) | TBA |

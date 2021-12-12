@@ -1,5 +1,7 @@
 # 🎄 Day 6: Lanternfish
 
+💡 https://adventofcode.com/2021/day/6
+
 ## 🧩 First puzzle
 
 The sea floor is getting steeper. Maybe the sleigh keys got carried this way?
