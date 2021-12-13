@@ -7,7 +7,7 @@ const [rawDots, rawInstructions] = textInput
 let xMax = 0;
 let yMax = 0;
 
-const dots = rawDots.map((xy) => {
+let dots = rawDots.reduce((acc, xy) => {
   const [x, y] = xy.split(",").map(Number);
 
   if (x > xMax) {
@@ -17,92 +17,64 @@ const dots = rawDots.map((xy) => {
     yMax = y;
   }
 
-  return [x, y];
-});
+  acc.add(JSON.stringify([x, y]));
+
+  return acc;
+}, new Set());
 
 const instructions = rawInstructions.map((i) => {
-  const [, axis, value] = i.match(/fold along (\S)=(\d*)/);
+  const [, axis, value] = i.match(/fold along (\S)=(\d+)/);
   return [axis, Number(value)];
 });
 
-function createSheet(dots) {
-  const sheet = new Array(yMax + 1)
-    .fill()
-    .map(() => new Array(xMax + 1).fill(false));
-
-  for (let [x, y] of dots) {
-    sheet[y][x] = true;
-  }
-
-  return sheet;
-}
-
-function fold(sheet, axis, value) {
-  dotsCount = 0;
+function fold(dots, axis, value) {
+  const newDots = new Set();
 
   if (axis === "y") {
-    const up = sheet.slice(0, value);
+    for (let jDot of dots) {
+      const [x, y] = JSON.parse(jDot);
 
-    for (
-      let yb = value + 1, yu = value - 1;
-      yb < sheet.length;
-      yb += 1, yu -= 1
-    ) {
-      const bottomLine = sheet[yb];
-
-      for (let x = 0; x < bottomLine.length; x += 1) {
-        const hasDot = up[yu][x] || bottomLine[x];
-
-        up[yu][x] = hasDot;
-
-        if (hasDot) {
-          dotsCount += 1;
-        }
+      if (y > value) {
+        newDots.add(JSON.stringify([x, 2 * value - y]));
+      } else {
+        newDots.add(jDot);
       }
     }
 
-    return { sheet: up, dotsCount };
+    yMax = value - 1;
   }
 
   if (axis === "x") {
-    const left = sheet.map((hLine) => {
-      const leftLine = hLine.slice(0, value);
+    for (let jDot of dots) {
+      const [x, y] = JSON.parse(jDot);
 
-      for (
-        let xr = hLine.length - 1, xl = 0;
-        xr > value;
-        xr -= 1, xl += 1
-      ) {
-        const hasDot = leftLine[xl] || hLine[xr];
-
-        leftLine[xl] = hasDot;
-
-        if (hasDot) {
-          dotsCount += 1;
-        }
+      if (x > value) {
+        newDots.add(JSON.stringify([2 * value - x, y]));
+      } else {
+        newDots.add(jDot);
       }
+    }
 
-      return leftLine;
-    });
+    xMax = value - 1;
+  }
 
-    return { sheet: left, dotsCount };
+  return newDots;
+}
+
+function displaySheet(dots, char = "░") {
+  for (let y = 0; y <= yMax; y += 1) {
+    let line = "";
+
+    for (let x = 0; x <= xMax; x += 1) {
+      line += dots.has(JSON.stringify([x, y])) ? char : " ";
+    }
+
+    console.log(line);
   }
 }
 
-function displaySheet(sheet) {
-  sheet.forEach((line) => {
-    const dots = line.reduce((acc, dot) => acc + (dot ? "*" : " "), "");
-    console.log(dots);
-  });
-}
-
-let foldResult = {
-  sheet: createSheet(dots),
-  dotsCount: 0,
-};
-
 for (let [axis, value] of instructions) {
-  foldResult = fold(foldResult.sheet, axis, value);
+  dots = fold(dots, axis, value);
 }
 
-displaySheet(foldResult.sheet);
+displaySheet(dots);
