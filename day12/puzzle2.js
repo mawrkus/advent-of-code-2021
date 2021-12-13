@@ -33,7 +33,7 @@ function pathsFinder(
   location = { name: "start", isSmallCave: true },
   currentPath = ["start"],
   visits = {},
-  maxVisitsAllowed = 2,
+  canVisitTwice = true,
 ) {
   if (location.name === "end") {
     return [currentPath];
@@ -45,16 +45,14 @@ function pathsFinder(
       [location.name]: visits[location.name] ? visits[location.name] + 1 : 1,
     };
 
-    if (visits[location.name] >= maxVisitsAllowed) {
-      maxVisitsAllowed = 1;
+    if (visits[location.name] >= 2) {
+      canVisitTwice = false;
     }
   }
 
   return destinations[location.name]
     .filter((location) =>
-      location.isSmallCave
-        ? !visits[location.name] || (visits[location.name] < maxVisitsAllowed)
-        : true
+      location.isSmallCave ? !visits[location.name] || canVisitTwice : true
     )
     .reduce(
       (acc, nextLocation) =>
@@ -63,7 +61,7 @@ function pathsFinder(
             nextLocation,
             [...currentPath, nextLocation.name],
             visits,
-            maxVisitsAllowed
+            canVisitTwice
           )
         ),
       []
