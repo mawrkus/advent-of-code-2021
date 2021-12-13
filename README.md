@@ -18,7 +18,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 10: Syntax Scoring](./day10) | ⭐⭐ |
 | [Day 11: Dumbo Octopus](./day11) | ⭐⭐ |
 | [Day 12: Passage Pathing](./day12) | ⭐⭐ |
-| [Day 13](./day13) | TBA |
+| [Day 13: Transparent Origami](./day13) | ⭐⭐ |
 | [Day 14](./day14) | TBA |
 | [Day 15](./day15) | TBA |
 | [Day 16](./day16) | TBA |
