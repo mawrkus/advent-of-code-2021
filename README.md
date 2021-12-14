@@ -19,7 +19,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 11: Dumbo Octopus](./day11) | ⭐⭐ |
 | [Day 12: Passage Pathing](./day12) | ⭐⭐ |
 | [Day 13: Transparent Origami](./day13) | ⭐⭐ |
-| [Day 14](./day14) | TBA |
+| [Day 14: Extended Polymerization](./day14) | ⭐⭐ |
 | [Day 15](./day15) | TBA |
 | [Day 16](./day16) | TBA |
 | [Day 17](./day17) | TBA |
