@@ -23,6 +23,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 15: Chiton](./day15) | ⭐⭐ |
 | [Day 16: Packet Decoder](./day16) | ⭐⭐ |
 | [Day 17: Trick Shot](./day17) | ⭐⭐ |
+| [Day 18: Snailfish](./day18) | ⭐⭐ |
 | [Day 19](./day19) | TBA |
 | [Day 20](./day20) | TBA |
 | [Day 21](./day21) | TBA |
