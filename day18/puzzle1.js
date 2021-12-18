@@ -131,12 +131,10 @@ const reduce = (number) => {
         continue;
       }
 
-      if (token.type === Number ) {
-        if (depth > 4) {
-          tokens = explode(token, i, tokens);
-          hasExploded = true;
-          break;
-        }
+      if (token.type === Number && depth > 4) {
+        tokens = explode(token, i, tokens);
+        hasExploded = true;
+        break;
       }
     }
 
@@ -147,22 +145,10 @@ const reduce = (number) => {
     for (let i = 0; i < tokens.length; i += 1) {
       const token = tokens[i];
 
-      if (token.value === "[") {
-        depth += 1;
-        continue;
-      }
-
-      if (token.value === "]") {
-        depth -= 1;
-        continue;
-      }
-
-      if (token.type === Number ) {
-        if (token.value >= 10) {
-          tokens = split(token, i, tokens);
-          hasSplit = true;
-          break;
-        }
+      if (token.type === Number && token.value >= 10) {
+        tokens = split(token, i, tokens);
+        hasSplit = true;
+        break;
       }
     }
   } while (hasExploded || hasSplit);
