@@ -72,17 +72,17 @@ const parsePacket = () => {
 
   // console.log(" * lengthType =", lengthType);
 
-  let hasParsedAllAubPackets;
+  let hasParsedAllSubPackets;
 
   if (lengthType === "BitsLength") {
     const { value: lengthInBits, pos: startPos } = parse("lengthInBits", 15);
     const endPos = startPos + lengthInBits;
 
-    hasParsedAllAubPackets = ({ pos }) => pos >= endPos;
+    hasParsedAllSubPackets = ({ pos }) => pos >= endPos;
   } else {
     const { value: subPacketsNumber } = parse("subPacketsNumber", 11);
 
-    hasParsedAllAubPackets = (_, i) => i >= subPacketsNumber;
+    hasParsedAllSubPackets = (_, i) => i >= subPacketsNumber;
   }
 
   const subPackets = [];
@@ -92,7 +92,7 @@ const parsePacket = () => {
 
     subPackets.push(lastParserResult);
 
-    if (hasParsedAllAubPackets(lastParserResult, i)) {
+    if (hasParsedAllSubPackets(lastParserResult, i)) {
       // console.log(" * subPackets =", subPackets);
 
       return {
