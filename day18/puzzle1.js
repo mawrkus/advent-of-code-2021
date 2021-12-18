@@ -156,8 +156,7 @@ const reduce = (number) => {
   return stringify(tokens);
 };
 
-const add = (leftNumber, rightNumber) =>
-  JSON.stringify([JSON.parse(leftNumber), JSON.parse(rightNumber)]);
+const add = (leftNumber, rightNumber) => `[${leftNumber},${rightNumber}]`;
 
 const magnitude = (pairs) => {
   if (Number.isInteger(pairs)) {
