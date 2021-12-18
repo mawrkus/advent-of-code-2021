@@ -1,8 +1,6 @@
 const textInput = require("./input");
 const { displayPath } = require("./displayPath");
 
-// 3068 TOO HIGH
-
 const topInput = textInput
   .split("\n")
   .filter(Boolean)
