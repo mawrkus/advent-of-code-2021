@@ -22,8 +22,7 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 14: Extended Polymerization](./day14) | ⭐⭐ |
 | [Day 15: Chiton](./day15) | ⭐⭐ |
 | [Day 16: Packet Decoder](./day16) | ⭐⭐ |
-| [Day 17: Trick Shot](./day17) | TBA |
-| [Day 18](./day18) | TBA |
+| [Day 17: Trick Shot](./day17) | ⭐⭐ |
 | [Day 19](./day19) | TBA |
 | [Day 20](./day20) | TBA |
 | [Day 21](./day21) | TBA |
