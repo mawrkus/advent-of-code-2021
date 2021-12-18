@@ -65,7 +65,7 @@ let highestResult = { highest : 0 };
 // Brute force :/
 // TODO: find a way to reduce the possibilities
 // which velocities ensure that the target is always hit?
-// what's the relationship with the maximum height that can be reached and the velocities?
+// what's the relationship between the maximum height and the velocities?
 for (let x = -1000; x < 1000; x += 1) {
   for (let y = -1000; y < 1000; y += 1) {
     const result = probe(x, y, targetAreaCoords);
