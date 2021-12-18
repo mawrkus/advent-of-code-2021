@@ -10,19 +10,19 @@ const buildParser = (bits, verbose = false) => {
 
   console.log("Parsing %d bits = '%s'", bits.length, bits);
 
-  return (name, charsCount, convertToDecimal = true) => {
+  return (name, bitsCount, convertToDecimal = true) => {
     if (pos > lastPos) {
       throw Error("ParserError: end of packet!");
     }
 
-    const slice = bits.substring(pos, pos + charsCount);
+    const slice = bits.substring(pos, pos + bitsCount);
     const value = convertToDecimal ? parseInt(slice, 2) : slice;
 
     if (verbose) {
       console.log("[%s] %s = %o", ("0000" + pos).slice(-4), name, value);
     }
 
-    pos += charsCount;
+    pos += bitsCount;
 
     return {
       value,
