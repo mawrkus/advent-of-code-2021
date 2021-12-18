@@ -47,7 +47,7 @@ const stringify = (tokens) =>
   tokens.reduce((acc, { value }) => acc + String(value), "");
 
 const explode = (leftToken, leftIndex, tokens) => {
-  for (let i = leftIndex - 1; i >= 0; i -= 1) {
+  for (let i = leftIndex - 2; i >= 0; i -= 1) {
     const token = tokens[i];
 
     if (token.type === Number) {
