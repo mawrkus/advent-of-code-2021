@@ -1,4 +1,4 @@
-const textInput = require("./sample");
+const textInput = require("./input");
 const { displayTrajectory } = require("./displayTrajectory");
 
 const input = textInput;
@@ -62,13 +62,18 @@ function probe(vx0, vy0, targetAreaCoords) {
 
 let highestResult = { highest : 0 };
 
-// Brute force :/
-// TODO: find a way to reduce the possibilities
-// which velocities ensure that the target is always hit?
-// what's the relationship between the maximum height and the velocities?
-for (let x = -1000; x < 1000; x += 1) {
-  for (let y = -1000; y < 1000; y += 1) {
-    const result = probe(x, y, targetAreaCoords);
+// As a -1 drag is applied on vx in each step,
+// the distance covered on the x axis is the sum of vx + vx - 1 + ... + 1 = vx * (vx + 1) / 2
+// In order to reach the target, we should at least have tx1 = vx * (vx + 1) / 2
+// => vx**2 + vx - 2*tx1 = 0
+// => vx = -1 +- Math.sqrt(1 + 8*tx1) / 2
+// is the minimum velocity on the x axis
+
+const vxmin = Math.ceil(-1 + Math.sqrt(1 + 8 * targetAreaCoords[0]) / 2);
+
+for (let vx = vxmin; vx < 1000; vx += 1) {
+  for (let vy = -1000; vy < 1000; vy += 1) {
+    const result = probe(vx, vy, targetAreaCoords);
 
     if (result.hit && (result.highest > highestResult.highest)) {
       highestResult = result;
@@ -79,5 +84,6 @@ for (let x = -1000; x < 1000; x += 1) {
 const output = highestResult;
 
 console.log(input);
-displayTrajectory(highestResult, targetAreaCoords);
+console.log("→", vxmin);
+// displayTrajectory(highestResult, targetAreaCoords);
 console.log("→", output);
