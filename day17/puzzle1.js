@@ -1,5 +1,5 @@
 const textInput = require("./input");
-const { displayTrajectory } = require("./displayTrajectory");
+// const { displayTrajectory } = require("./displayTrajectory");
 
 const input = textInput;
 
@@ -70,8 +70,9 @@ let highestResult = { highest : 0 };
 // is the minimum velocity on the x axis
 
 const vxmin = Math.ceil(-1 + Math.sqrt(1 + 8 * targetAreaCoords[0]) / 2);
+const vxmax = targetAreaCoords[1];
 
-for (let vx = vxmin; vx < 1000; vx += 1) {
+for (let vx = vxmin; vx <= vxmax; vx += 1) {
   for (let vy = -1000; vy < 1000; vy += 1) {
     const result = probe(vx, vy, targetAreaCoords);
 
@@ -84,6 +85,6 @@ for (let vx = vxmin; vx < 1000; vx += 1) {
 const output = highestResult;
 
 console.log(input);
-console.log("→", vxmin);
 // displayTrajectory(highestResult, targetAreaCoords);
-console.log("→", output);
+console.log("→", output.highest);
+console.log("→", [output.vx0, output.vy0]);

@@ -62,8 +62,9 @@ function probe(vx0, vy0, targetAreaCoords) {
 const results = [];
 
 const vxmin = Math.ceil(-1 + Math.sqrt(1 + 8 * targetAreaCoords[0]) / 2); // see puzzle1.js
+const vxmax = targetAreaCoords[1];
 
-for (let vx = vxmin; vx < 1000; vx += 1) {
+for (let vx = vxmin; vx <= vxmax; vx += 1) {
   for (let vy = -1000; vy < 1000; vy += 1) {
     const result = probe(vx, vy, targetAreaCoords);
 
@@ -76,5 +77,5 @@ for (let vx = vxmin; vx < 1000; vx += 1) {
 const output = results.length;
 
 console.log(input);
-console.log("→", results);
+// console.log("→", results);
 console.log("→", output);
