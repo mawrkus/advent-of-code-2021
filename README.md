@@ -24,8 +24,8 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 16: Packet Decoder](./day16) | ⭐⭐ |
 | [Day 17: Trick Shot](./day17) | ⭐⭐ |
 | [Day 18: Snailfish](./day18) | ⭐⭐ |
-| [Day 19](./day19) | TBA |
-| [Day 20](./day20) | TBA |
+| [Day 19: Beacon Scanner](./day19) | 🧠 |
+| [Day 20: Trench Map](./day20) | ⭐⭐ |
 | [Day 21](./day21) | TBA |
 | [Day 22](./day22) | TBA |
 | [Day 23](./day23) | TBA |
