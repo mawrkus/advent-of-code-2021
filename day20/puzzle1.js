@@ -53,9 +53,9 @@ function enhanceImage(iterNum, previousImage) {
 
   const padding = 1;
 
-  // after the first iteration on an infinite space, the whole space outside of the
-  // image is completely lit
-  const defaultBackgroundPixel = iterNum === 1 ? "1" : "0";
+  // if the algorithm decides to lit the infinite dark space during the 1st iteration,
+  // we set this value to reflect it, so that the pixels outside of the initial image will be correct
+  const defaultBackgroundPixel = algorithm[0] === "0" ? "0" : iterNum === 1 ? "1" : "0";
 
   for (let y = -padding; y < linesCount + padding; y += 1) {
     const line = [];
