@@ -1,6 +1,6 @@
 # 🎄 Advent of Code 2021 🎄
 
-JavaScript solutions for the [Advent of Code 2021](https://adventofcode.com/2021) programming puzzles.
+My JavaScript solutions for the [Advent of Code 2021](https://adventofcode.com/2021) programming puzzles.
 
 Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event every year!
 
@@ -26,8 +26,10 @@ Big ups to [Eric Wastl](https://twitter.com/ericwastl) for organising this event
 | [Day 18: Snailfish](./day18) | ⭐⭐ |
 | [Day 19: Beacon Scanner](./day19) | ⭐⭐ |
 | [Day 20: Trench Map](./day20) | ⭐⭐ |
-| [Day 21](./day21) | TBA |
-| [Day 22](./day22) | TBA |
-| [Day 23](./day23) | TBA |
-| [Day 24](./day24) | TBA |
-| [Day 25](./day25) | TBA |
+| [Day 21: Dirac Dice](./day21) | ⭐⭐ |
+| [Day 22: Reactor Reboot](./day22) | 🧠 |
+| [Day 23: Amphipod](./day23) | 🧠 |
+| [Day 24: Arithmetic Logic Unit](./day24) | 🧠 |
+| [Day 25: Sea Cucumber](./day25) | 🧠 |
+
+This year, I've managed to complete Day 1 → Day 21 before Christmas.
